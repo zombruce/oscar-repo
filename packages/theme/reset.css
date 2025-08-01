@@ -1,0 +1,11 @@
+body {
+  min-height: 100vh;
+
+  /* pointer-events: auto !important; */
+
+  /* overflow: overlay; */
+
+  /* -webkit-font-smoothing: antialiased; */
+
+  /* -moz-osx-font-smoothing: grayscale; */
+}

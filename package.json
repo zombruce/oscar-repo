@@ -1,20 +1,36 @@
 {
-  "name": "my-turborepo",
-  "private": true,
+  "name": "@oscar-repo/workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "dev": "pnpm --filter @oscar-repo/play run dev",
+    "docs:dev": "pnpm --filter @oscar-repo/docs run docs:dev",
+    "docs:build": "pnpm --filter @oscar-repo/docs run docs:build",
+    "test": "echo 'todo'"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "workspaces": ["packages/*"],
   "devDependencies": {
-    "prettier": "^3.6.2",
-    "turbo": "^2.5.5",
-    "typescript": "5.8.3"
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^24.1.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vitejs/plugin-vue-jsx": "^5.0.1",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.6",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^2.2.12"
   },
-  "packageManager": "pnpm@9.0.0",
-  "engines": {
-    "node": ">=18"
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "vue": "^3.5.18",
+    "oscar-repo": "workspace:*",
+    "@oscar-repo/hooks": "workspace:*",
+    "@oscar-repo/utils": "workspace:*",
+    "@oscar-repo/theme": "workspace:*"
   }
 }
